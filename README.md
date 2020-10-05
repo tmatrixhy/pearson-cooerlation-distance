@@ -81,6 +81,4 @@ Directory structure:
 
 2. Examined the dataset to determine how 'big' of a sparse matrix I would have to work with. For the smaller json file (CF_docl_matrix.json) the max index value was 459316, for the larger file (AB_docl_matrix.json) the max index value was 45453.
 
-3. Since I was looking at portions of total ID's available I chose to use the Pearson's correlation coefficientfor a sample as defined here:
-    <img src="https://render.githubusercontent.com/render/math?math=r = \frac{{}\sum_{i=1}^{n} (x_i - \overline{x})(y_i - \overline{y})}
-{\sqrt{\sum_{i=1}^{n} (x_i - \overline{x})^2(y_i - \overline{y})^2}}">
+3. Since I was looking at portions of total ID's available I chose to use the Pearson's correlation coefficientfor a sample as defined here: ![Sample PCC](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient#For_a_sample)

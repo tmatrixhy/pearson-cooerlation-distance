@@ -120,7 +120,7 @@ It came to roughly 1.5 hours (5581196.881 ms) on my home machine.
 
 Please note these files might require permissions as they're hosted on my University's Google Drive account. If this does not work please let me know where I can upload the files so you may view them.
 
-# Quesiton 2
+# Question 2
 
 The best method I could come up with for storing the data within the program was a dictionary of sets instead of lists. Using sets optimizes for quick comparisons between two sets since there is a O(1) lookup and len(set) comparison factor.
 

@@ -95,6 +95,16 @@ class Pearson_Correlation_Distance():
     return 1 - (numerator / denominator)
 
   def create_matrix(self):
+    """
+      Create adjacency matrix and adjacency list of Pearson correlation 
+          distance from stored data.
+
+      Processing: O( 
+                     ((len(id_values)^2) / 2 - len(id_values)) * 
+                      max(len([list of non-empty column names])) * 2
+                   )      
+    """
+    max(len([list of non-empty column names])) * 2
     start_time = time.time()
 
     for x in range(0,len(self._id_list)):

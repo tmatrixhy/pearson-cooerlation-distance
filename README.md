@@ -15,17 +15,23 @@ Extract .zip to directory.
 
 From command line:
 ```
-    python3 .\src\generate_data.py .\data\CF_docl_matrix.json
+    python3 .\src\generate_data.py .\data\[input_file]
 ```
-usage: python3 .\src\generate_data.py .\data\[input_file]
-          -- input_file   - adjacency list in json file with { index_value : [list] ...} format 
-          -- output_files - adjacency_matrix.csv + adjacency_list.csv
-  
-output: 'matrix' = csv with MxM upper triangular matrix
-                      row 0 identify's user_id
-                      [user_id 1][user_id 2] = PCD
-          'list' = csv with adjacency list in 
-                     { (user_id_1 , user_id_2): PCD }
+
+Input: 
+```
+    -- [input_file]   - adjacency list in json file with { index_value : [list] ...} format.
+                        ex: CF_docl_matrix.json
+```
+
+Output:
+```
+    -- output_files - adjacency_matrix.csv + adjacency_list.csv
+        'matrix' = MxM upper triangular matrix.
+                    row 0 identify's user_id
+                    [user_id 1][user_id 2] = PCD
+          'list' = Adjacency list with each row in 
+                    [user_id 1, user_id 2, PCD] format.
                       
             PCD == Pearson correlation distance
 

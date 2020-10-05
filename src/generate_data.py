@@ -104,7 +104,6 @@ class Pearson_Correlation_Distance():
                       max(len([list of non-empty column names])) * 2
                    )      
     """
-    max(len([list of non-empty column names])) * 2
     start_time = time.time()
 
     for x in range(0,len(self._id_list)):

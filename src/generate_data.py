@@ -144,14 +144,14 @@ class Pearson_Correlation_Distance():
 def main():
   """
   usage: python3 generate_data.py [input_file]
-          -- input_file   - adjacency list in json file with { index_value : [list] ...} format 
+          -- [input_file]   - adjacency list in json file with { index_value : [list] ...} format 
           -- output_files - adjacency_matrix.csv + adjacency_list.csv
   
   output: 'matrix' = csv with MxM upper triangular matrix
                       row 0 identify's user_id
                       [user_id_1][user_id_2] = PCD
-          'list'   = csv with adjacency list in 
-                     { (user_id_1 , user_id_2): PCD }
+          'list'   = csv with Adjacency list with each row in 
+                      [user_id 1, user_id 2, PCD] format.
                       
             PCD == Pearson correlation distance
   """

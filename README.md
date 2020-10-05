@@ -1,10 +1,11 @@
 # Graphika Take Home
 
+Results of the take home project.
 
 
 #Installation & Run
 
-Project compiled on Python=3.8.6.
+Project utilizes Python=3.8.6.
 
 Extract .zip to directory.
 ```
@@ -73,3 +74,13 @@ Directory structure:
 |
 └─  README.md
 ```
+
+#Question 1
+
+1. I approached this problem by first researching Pearson correlation distance. It was not a metric I had used before therefore I tried to gain a sense of what we were trying to accomplish by generating this data using this specific metric.
+
+2. Examined the dataset to determine how 'big' of a sparse matrix I would have to work with. For the smaller json file (CF_docl_matrix.json) the max index value was 459316, for the larger file (AB_docl_matrix.json) the max index value was 45453.
+
+3. Since I was looking at portions of total ID's available I chose to use the Pearson's correlation coefficientfor a sample as defined here:
+    <img src="https://render.githubusercontent.com/render/math?math=r = \frac{{}\sum_{i=1}^{n} (x_i - \overline{x})(y_i - \overline{y})}
+{\sqrt{\sum_{i=1}^{n} (x_i - \overline{x})^2(y_i - \overline{y})^2}}">

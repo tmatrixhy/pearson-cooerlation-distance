@@ -13,18 +13,35 @@ class Pearson_Correlation_Distance():
   _adjacency_list = []
   
   def __init__(self, data):
-    # O(n*max(m))
+    """
+      Input: data : Dictionary in the following format: 
+                    { index_value : [list of non-empty column names], ... }
+
+        data pre-processing = O( n * max(m) )
+        n = # of keys (index_value) in dictonary.
+        m = len( [list of non-empty column names] ) in dictionary
+    """
     for key in data: #O(n)
+      # create list of ID's
       self._id_list.append(key) #O(1)
+
+      # convert list to set
       self._data_set[key] = set(data[key]) #O(m)
+      
+      # keep track of the maximum value of feature (ID 'interests')
       self._max_feature = max(self._max_feature, max(self._data_set[key])) #O(m)
     
+    # sort id list for cleaner, currently sorts by 'string' need to conv to 'int' ?
     self._id_list.sort()
+
+    # Add 1 to max_feature to account for 0'th element
     self._max_feature += 1
+
+    # Create empty adjacency matrix
     self._adjacency_matrix = np.zeros((len(self._id_list), len(self._id_list)))
 
   def _calculate_r_value(self, set_a, set_b) -> float:
-    '''
+    """
     Input:
       set_a : A vector of object type 'set' where elements represent indices 
               of a sparse vector.
@@ -34,7 +51,7 @@ class Pearson_Correlation_Distance():
       returns : An float representing the Pearson coorelation distance 
                   as defined in the supporting README.md
 
-    '''
+    """
     # length of set_a is the same as the sum of all 'x'
     sig_x = len(set_a)
 

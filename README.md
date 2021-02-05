@@ -1,6 +1,4 @@
-# Take Home Exercise - Pearson Correlation Distance
-
-Results of the take home project.
+# Optimized Pearson Correlation Distance Calculator
 
 # Installation & Run
 

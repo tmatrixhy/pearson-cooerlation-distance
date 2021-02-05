@@ -1,4 +1,4 @@
-# Take Home Exercise - Pearson Cooerlation Distance
+# Take Home Exercise - Pearson Correlation Distance
 
 Results of the take home project.
 

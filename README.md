@@ -1,4 +1,4 @@
-# Graphika Take Home
+# Take Home Exercise - Pearson Cooerlation Distance
 
 Results of the take home project.
 

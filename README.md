@@ -51,17 +51,17 @@ Directory structure:
 |
 ├───notebooks
 │   ├───colab_
-│   │       2020.10.1-Graphika-Initial_Exploration.ipynb
+│   │       2020.10.1-Initial_Exploration.ipynb
 |   |           └───|# Experiments utilizing Google Colab - Initial Exploration & PCD Tests
 |   |
-│   │       2020.10.3-Graphika-Parallel_Execution.ipynb
+│   │       2020.10.3-Parallel_Execution.ipynb
 |   |           └───|# Experiments utilizing Google Colab - Initial Parallellization Attempt
 │   │
 │   └───jupyter
-│           2020.10.3-Graphika_Large_File_Output_Generator.ipynb
+│           2020.10.3-Large_File_Output_Generator.ipynb
 |               └───|# Used to generate results of larger dataset (AB_docl_matrix.json) 
 |
-│           2020.10.3-Graphika_Ray_Experiments.ipynb
+│           2020.10.3-Ray_Experiments.ipynb
 │               └───|#- Local experiments with Ray - Works but not optimized at all.
 |
 ├───results_csv
@@ -90,7 +90,7 @@ Directory structure:
     
     b. [Please see this file for a breakdown of the formula to optimize for speed](https://github.com/tmatrixhy/gphk-take-home/blob/main/formula/formula.pdf).
 
-4. Once implemented I created basic tests and a naive for-loop (SLOW method) to check calculations against the (FAST method) described in #3 above. These tests can be [found in this file](https://github.com/tmatrixhy/gphk-take-home/blob/main/notebooks/colab_/2020.10.1-Graphika-Initial_Exploration.ipynb) at the bottom. The Markdown in the file explains what is being performed.
+4. Once implemented I created basic tests and a naive for-loop (SLOW method) to check calculations against the (FAST method) described in #3 above. These tests can be [found in this file](https://github.com/tmatrixhy/gphk-take-home/blob/main/notebooks/colab_/2020.10.1-Initial_Exploration.ipynb) at the bottom. The Markdown in the file explains what is being performed.
 
 #### Results for smaller dataset (CF_docl_matrix.json):
 
@@ -111,7 +111,7 @@ Note the error between the two methods is described as the absolute value of the
 
 #### Results for larger dataset (AB_docl_matrix.json)
 
-[The processing time using the optimized method can be found here](https://github.com/tmatrixhy/gphk-take-home/blob/main/notebooks/jupyter/2020.10.3-Graphika_Large_File_Output_Generator.ipynb).
+[The processing time using the optimized method can be found here](https://github.com/tmatrixhy/gphk-take-home/blob/main/notebooks/jupyter/2020.10.3-Large_File_Output_Generator.ipynb).
 It came to roughly 1.5 hours (5581196.881 ms) on my home machine.
 
 [Download link for adjacency matrix.](https://drive.google.com/file/d/1HiTQjGAL-RRLSB7lhu_bzGoMk_kLYk8a/view?usp=sharing)
@@ -150,7 +150,7 @@ To me the execution of this mini program can be built directly into the database
 
 # Question 3 / TODO List
 
-I attempted to further optimize speed prior to submission but was running against time for this take home exercise. The method which I started, [and can be found here](https://github.com/tmatrixhy/gphk-take-home/blob/main/notebooks/jupyter/2020.10.3-Graphika_Ray_Experiments.ipynb), was to use the [ray](https://github.com/ray-project/ray) library. This feature rich library allows for the parallelization and distribution of tasks. 
+I attempted to further optimize speed prior to submission but was running against time for this take home exercise. The method which I started, [and can be found here](https://github.com/tmatrixhy/gphk-take-home/blob/main/notebooks/jupyter/2020.10.3-Ray_Experiments.ipynb), was to use the [ray](https://github.com/ray-project/ray) library. This feature rich library allows for the parallelization and distribution of tasks. 
 
 1. For the first method of optimization, I would have liked the `_calculate_r_value(self, set_a, set_b) -> float:` method to be distributed evenly amongst all cpus available and later if any other nodes in a cluster were avaialble. Unfortunately, I think the current hangup in code lies in the way that I am pre-processing the data. I believe the fix to making this run efficiently with the current code requires segementation of the data prior to executing the ray methods.
 
